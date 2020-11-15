@@ -1,0 +1,11 @@
+.md-dialog-container {
+    background-color: #000;
+    width: 450px;
+    height: 250px
+}
+
+.close-btn-outer.button{
+    position: relative;
+    right: 144px;
+    top: 144px;
+}

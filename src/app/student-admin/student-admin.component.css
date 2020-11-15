@@ -1,0 +1,37 @@
+mat-cell {
+    /* row padding */
+    padding: 16px 0;
+    /* row border */
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
+   }
+   mat-header-cell
+   {
+    /* row padding */
+    padding: 16px 0;
+    /* row border */
+    border-bottom: 1px solid #491717;
+    border-top: 1px solid #491717;
+   }
+   mat-header-cell:first-child{
+    border-left: 1px solid #491717;
+
+   }
+   mat-header-cell:last-child{
+    border-right: 1px solid #491717;
+
+   }
+   mat-cell:first-child {
+     /* row border */
+     border-left: 1px solid #000000;
+   }
+   
+   mat-cell:last-child {
+     /* row border */
+     border-right: 1px solid #000000;
+   }
+   
+   table {
+     /* row spacing / margin */
+     border-spacing: 0 8px !important;
+   } 

@@ -1,0 +1,39 @@
+<div class="container">
+
+<div class="mat-table orders-table">
+    <mat-table #table [dataSource]="dataSource" matSort>
+      <ng-container matColumnDef="name">
+        
+        <mat-header-cell *matHeaderCellDef mat-sort-header style="flex: 1%;"> Name </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="flex: 1%;">
+          {{element.name}} </mat-cell>
+      </ng-container>
+      
+      <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef mat-sort-header style="flex: 1%;"> Email </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="flex: 1%;">
+          {{element.email}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="age">
+        <mat-header-cell *matHeaderCellDef mat-sort-header style="flex: 1%;"> Age </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="flex: 1%;">
+          {{element.age}} </mat-cell>
+      </ng-container>
+  
+      
+      <ng-container matColumnDef="signUpDate">
+        <mat-header-cell *matHeaderCellDef mat-sort-header style="flex: 1%;"> Signed Up Date </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="flex: 1%;">
+          {{element.signUpDate | date}} </mat-cell>
+      </ng-container>    
+      
+      <mat-header-row *matHeaderRowDef="columnsToDisplay;"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: columnsToDisplay;"></mat-row>
+      
+  
+    </mat-table>
+    <mat-paginator  [pageSize]="1" [pageSizeOptions]="[1, 5, 30, 50]" [showFirstLastButtons]="true">
+    </mat-paginator>
+  </div>
+</div>

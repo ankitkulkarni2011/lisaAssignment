@@ -1,0 +1,44 @@
+
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let img of imgs">
+    <mat-card class="mat-elevation-z4" >
+      <mat-card-header>
+        <!-- <mat-card-title><a (click)=openEditDialog(img)>{{img.name}}</a></mat-card-title> -->
+        <mat-card-title><a (click)=setData(img)>{{img.name}}</a></mat-card-title>
+
+      </mat-card-header>
+      <img mat-card-image [src]="img.imageLink">
+      <mat-card-content>
+        <p>
+         Email : {{img.email}}<br>
+         Age : {{img.age}}<br>
+         country:{{img.country}}<br>
+        Age using DOB : {{ img.dob | showAge }}
+        </p>
+
+      </mat-card-content>
+     
+    </mat-card>
+  </div>
+</div>
+
+
+<!-- import { Pipe, PipeTransform } from '@angular/core';
+import * as moment from 'moment';
+@Pipe({
+    name: 'age'
+})
+export class AgePipe implements PipeTransform {
+
+    transform(value: Date): string {
+        let today = moment();
+                let birthdate = moment(value);
+                let years = today.diff(birthdate, 'years');
+                let html:string = years + " yr ";
+
+                html += today.subtract(years, 'years').diff(birthdate, 'months') + " mo";
+
+        return html;
+    }
+
+} -->
